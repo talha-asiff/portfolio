@@ -479,7 +479,181 @@ class MainApp extends StatelessWidget {
                 )
               ],
             ),
-            
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Positioned.fill(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          const Color.fromARGB(255, 36, 99, 73),
+                          Colors.black,
+                          Colors.black,
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(height: 20,),
+                      Text(
+                          "EDUCATION",
+                          style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 40,
+                          fontFamily: "f1",
+                        ),
+                      ),
+                      SizedBox(height: 20,),
+                      w>=h ? 
+                        Row(
+                            children: [
+                              SizedBox(width: 100,),
+                              Container(
+                                width: 350,
+                                height: 200,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.white,
+                                  ),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                alignment: Alignment.center,
+                                child: Column(
+                                  children: [
+                                    SizedBox(height: 65,),
+                                    Text("COMSATS Lahore", style: TextStyle(color: Colors.white, fontSize: 25),),
+                                    Text("BS Software Engineering (2nd semester)", style: TextStyle(color: Colors.white, fontSize: 15),),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                width: 140,
+                                height: 1,
+                                color:Colors.white
+                              ),
+                              Container(
+                                width: 350,
+                                height: 200,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.white
+                                  ),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                alignment: Alignment.center,
+                                child: Column(
+                                  children: [
+                                    SizedBox(height: 65,),
+                                    Text("MTB College SDK", style: TextStyle(color: Colors.white, fontSize: 25),),
+                                    Text("Intermedite in Computer Science", style: TextStyle(color: Colors.white, fontSize: 15),),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                width: 100,
+                                height: 1,
+                                color:Colors.white
+                              ),
+                              Container(
+                                width: 350,
+                                height: 200,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.white
+                                  ),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                alignment: Alignment.center,
+                                child: Column(
+                                  children: [
+                                    SizedBox(height: 65,),
+                                    Text("MTB School SDK", style: TextStyle(color: Colors.white, fontSize: 25),),
+                                    Text("Secondary School", style: TextStyle(color: Colors.white, fontSize: 15),),
+                                  ],
+                                ),
+                              ),
+                              
+                            ],
+                          )
+                        : Column(
+                            children: [
+                              Container(
+                                width: 220,
+                                height: 100,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.white,
+                                  ),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                alignment: Alignment.center,
+                                child: Column(
+                                  children: [
+                                    SizedBox(height: 25,),
+                                    Text("COMSATS Lahore", style: TextStyle(color: Colors.white, fontSize: 18),),
+                                    Text("BS Software Engineering (2nd semester)", style: TextStyle(color: Colors.white, fontSize: 10),),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                width: 1,
+                                height: 80,
+                                color:Colors.white
+                              ),
+                              Container(
+                                width: 200,
+                                height: 100,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.white
+                                  ),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                alignment: Alignment.center,
+                                child: Column(
+                                  children: [
+                                    SizedBox(height: 25,),
+                                    Text("MTB College SDK", style: TextStyle(color: Colors.white, fontSize: 18),),
+                                    Text("Intermedite in Computer Science", style: TextStyle(color: Colors.white, fontSize: 10),),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                width: 1,
+                                height: 80,
+                                color:Colors.white
+                              ),
+                              Container(
+                                width: 200,
+                                height: 100,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.white
+                                  ),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                alignment: Alignment.center,
+                                child: Column(
+                                  children: [
+                                    SizedBox(height: 25,),
+                                    Text("MTB School SDK", style: TextStyle(color: Colors.white, fontSize: 18),),
+                                    Text("Secondary School", style: TextStyle(color: Colors.white, fontSize: 10),),
+                                  ],
+                                ),
+                              )
+                            ]
+                        )
+
+                    ],
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),
