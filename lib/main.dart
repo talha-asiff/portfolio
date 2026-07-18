@@ -1,121 +1,839 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
+bool horizontal = false;
 void main() {
-  runApp(const MyApp());
+  runApp(MainApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MainApp extends StatelessWidget {
+  String? bg;
+  String? bg2;
+  final Uri _url1 = Uri.parse("https://github.com/talha-asiff");
+  final Uri _url2 = Uri.parse(
+    "https://www.linkedin.com/in/talha-asif-439651321/",
+  );
+  final Uri _url3 = Uri.parse("mailto:talhaasif.dev@gmail.com");
 
-  // This widget is the root of your application.
+  Future<void> launchSite1() async {
+    await launchUrl(_url1);
+  }
+
+  Future<void> launchSite2() async {
+    await launchUrl(_url2);
+  }
+
+  Future<void> contact() async {
+    await launchUrl(_url3);
+  }
+
   @override
   Widget build(BuildContext context) {
+    double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: .center,
-          children: [
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+      home: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          title: Text(
+            "  TALHA ASIF",
+            style: TextStyle(
+              color: const Color.fromARGB(255, 255, 255, 255),
+              fontFamily: "f1",
+            ),
+          ),
+          backgroundColor: Colors.black.withValues(alpha: 0.5),
+          actions: [
+            InkWell(
+              onTap: contact,
+              child: Container(
+                width: 150,
+                height: 50,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(100),
+                  border: Border.all(color: Colors.white),
+                ),
+                alignment: Alignment.center,
+                child: Text(
+                  " Contact ",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontFamily: "f2",
+                  ),
+                ),
+              ),
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        body: PageView(
+          scrollDirection: Axis.vertical,
+          children: [
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Positioned.fill(child: Image.asset(bg!, fit: BoxFit.cover)),
+                Positioned(
+                  child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: horizontal ? 0 : 350,
+                          height: horizontal
+                              ? 0
+                              : MediaQuery.of(context).size.height - 500,
+                          child: Stack(
+                            alignment: Alignment.center,
+                            children: [
+                              Container(
+                                width: 350,
+                                height: 350,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: NetworkImage(
+                                      'https://avatars.githubusercontent.com/u/271928499?v=4',
+                                    ),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                alignment: Alignment.center,
+                              ),
+                            ],
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              width: 350,
+                              height: 350,
+                              alignment: Alignment.center,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "TALHA ASIF",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 80,
+                                      fontFamily: "f1",
+                                    ),
+                                  ),
+                                  Text(
+                                    "BS Software Engineering Student, Flutter App developer ",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,
+                                      fontFamily: "f2",
+                                    ),
+                                  ),
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.location_on_outlined,
+                                        color: Colors.white,
+                                        size: 14,
+                                      ),
+                                      Text(
+                                        " Lahore, Pakistan ",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                          fontFamily: "f2",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.school,
+                                        color: Colors.white,
+                                        size: 14,
+                                      ),
+                                      Text(
+                                        " Student at COMSATS Lahore ",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                          fontFamily: "f2",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 10),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      InkWell(
+                                        onTap: launchSite1,
+                                        child: Container(
+                                          width: 150,
+                                          height: 50,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(
+                                              100,
+                                            ),
+                                            border: Border.all(
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                          alignment: Alignment.center,
+                                          child: Text(
+                                            " My GitHub ",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 15,
+                                              fontFamily: "f2",
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(width: 5),
+                                      InkWell(
+                                        onTap: launchSite2,
+                                        child: Container(
+                                          width: 150,
+                                          height: 50,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(
+                                              100,
+                                            ),
+                                            color: Colors.white,
+                                          ),
+                                          alignment: Alignment.center,
+                                          child: Text(
+                                            " Linkedin ",
+                                            style: TextStyle(
+                                              color: const Color.fromARGB(
+                                                255,
+                                                0,
+                                                0,
+                                                0,
+                                              ),
+                                              fontSize: 15,
+                                              fontFamily: "f2",
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              width: horizontal
+                                  ? MediaQuery.of(context).size.width - 500
+                                  : 0,
+                              height: horizontal ? 300 : 0,
+                              child: Stack(
+                                alignment: Alignment.centerRight,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.all(30),
+                                    child: Container(
+                                      width: 350,
+                                      height: 350,
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          image: NetworkImage(
+                                            'https://avatars.githubusercontent.com/u/271928499?v=4',
+                                          ),
+                                          fit: BoxFit.cover,
+                                        ),
+                                        borderRadius: BorderRadius.circular(
+                                          360,
+                                        ),
+                                      ),
+                                      alignment: Alignment.center,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Positioned.fill(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Colors.black,
+                          Colors.black,
+                          const Color.fromARGB(255, 36, 99, 73),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(height: 20,),
+                        Text(
+                            "TECH STACK",
+                            style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                            fontFamily: "f1",
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(10),
+                          child: SizedBox(
+                          width: w,
+                          height: h - (w>=h ? 350 : 100),
+                          child: ListView(
+                            scrollDirection: w>h ? Axis.horizontal : Axis.vertical,
+                            children: [
+                              Container(
+                                width: w>=h ? 350 : 300,
+                                height: w>=h ? 100 : 200,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(colors: [Colors.blue, const Color.fromARGB(255, 102, 68, 255)]),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                alignment: Alignment.center,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                  Image.network("https://i.ibb.co/YFfZdq6C/pngwing-com.png", width: 80, height: 80,),
+                                  Text("  Flutter", style: TextStyle(color: Colors.white, fontSize: 50),)
+                                ],),
+                              ),
+                              SizedBox(width: 10, height: 10,),
+                              Container(
+                                width: w>=h ? 350 : 300,
+                                height: w>=h ? 100 : 200,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 213, 193, 7), const Color.fromARGB(255, 204, 73, 2)]),
+                                  borderRadius: BorderRadius.circular(20)
+                                ),
+                                alignment: Alignment.center,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                  Image.network("https://i.ibb.co/1tdms01h/pngwing-com-3.png", width: 80, height: 80,),
+                                  Text("  Firebase", style: TextStyle(color: Colors.white, fontSize: 50),)
+                                ],),
+                              ),
+                              SizedBox(width: 10, height: 10,),
+                              
+                              Container(
+                                width: w>=h ? 350 : 300,
+                                height: w>=h ? 100 : 200,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 65, 33, 243), const Color.fromARGB(255, 68, 227, 255)]),
+                                  borderRadius: BorderRadius.circular(20)
+                                ),
+                                alignment: Alignment.center,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                  Image.network("https://i.ibb.co/twXN4LCQ/dart.png", width: 80, height: 80,),
+                                  Text("  Dart", style: TextStyle(color: Colors.white, fontSize: 50),)
+                                ],),
+                              ),
+                              SizedBox(width: 10, height: 10,),
+                              Container(
+                                width: w>=h ? 350 : 300,
+                                height: w>=h ? 100 : 200,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 24, 2, 148), const Color.fromARGB(255, 0, 85, 212)]),
+                                  borderRadius: BorderRadius.circular(20)
+                                ),
+                                alignment: Alignment.center,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                  Image.network("https://i.ibb.co/Lhh3nmN6/pngwing-com-1.png", width: 80, height: 80,),
+                                  Text("  C++", style: TextStyle(color: Colors.white, fontSize: 50),)
+                                ],),
+                              ),
+                              SizedBox(width: 10, height: 10,),
+                              Container(
+                                width: w>=h ? 350 : 300,
+                                height: w>=h ? 100 : 200,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 20, 1, 131), const Color.fromARGB(255, 0, 69, 219)]),
+                                  borderRadius: BorderRadius.circular(20)
+                                ),
+                                alignment: Alignment.center,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                  Image.network("https://i.ibb.co/PzYtT580/pngwing-com-4.png", width: 80, height: 80,),
+                                  Text("  C", style: TextStyle(color: Colors.white, fontSize: 50),)
+                                ],),
+                              ),
+                              SizedBox(width: 10, height: 10,),
+                              Container(
+                                width: w>=h ? 350 : 300,
+                                height: w>=h ? 100 : 200,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 15, 3, 81), const Color.fromARGB(255, 164, 219, 0)]),
+                                  borderRadius: BorderRadius.circular(20)
+                                ),
+                                alignment: Alignment.center,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                  Image.network("https://i.ibb.co/rGssrMxz/pngwing-com-2.png", width: 80, height: 80,),
+                                  Text("  Python", style: TextStyle(color: Colors.white, fontSize: 50),)
+                                ],),
+                              ),
+                              SizedBox(width: 10, height: 10,),
+                              Container(
+                                width: w>=h ? 350 : 300,
+                                height: w>=h ? 100 : 200,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 1, 49, 131), const Color.fromARGB(255, 0, 106, 219)]),
+                                  borderRadius: BorderRadius.circular(20)
+                                ),
+                                alignment: Alignment.center,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                  Image.network("https://i.ibb.co/gZvycXJc/pngwing-com-5.png", width: 80, height: 80,),
+                                  Text("  Godot Engine", style: TextStyle(color: Colors.white, fontSize: 30),)
+                                ],),
+                              ),
+                              SizedBox(width: 10, height: 10,),
+                              Container(
+                                width: w>=h ? 350 : 300,
+                                height: w>=h ? 100 : 200,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 131, 51, 1), const Color.fromARGB(255, 219, 131, 0)]),
+                                  borderRadius: BorderRadius.circular(20)
+                                ),
+                                alignment: Alignment.center,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                  Image.network("https://i.ibb.co/nNP21Wb9/pngwing-com-6.png", width: 80, height: 80,),
+                                  Text("  HTML", style: TextStyle(color: Colors.white, fontSize: 30),)
+                                ],),
+                              ),
+                              SizedBox(width: 10, height: 10,),
+                              Container(
+                                width: w>=h ? 350 : 300,
+                                height: w>=h ? 100 : 200,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 1, 10, 131), const Color.fromARGB(255, 0, 110, 255)]),
+                                  borderRadius: BorderRadius.circular(20)
+                                ),
+                                alignment: Alignment.center,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                  Image.network("https://i.ibb.co/wFYhCSHj/pngwing-com-7.png", width: 80, height: 80,),
+                                  Text("  CSS", style: TextStyle(color: Colors.white, fontSize: 30),)
+                                ],),
+                              ),
+                              SizedBox(width: 10, height: 10,),
+                              Container(
+                                width: w>=h ? 350 : 300,
+                                height: w>=h ? 100 : 200,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 131, 107, 1), const Color.fromARGB(255, 208, 219, 0)]),
+                                  borderRadius: BorderRadius.circular(20)
+                                ),
+                                alignment: Alignment.center,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                  Image.network("https://i.ibb.co/C5NXMC0X/pngwing-com-8.png", width: 80, height: 80,),
+                                  Text("  Javascript", style: TextStyle(color: Colors.white, fontSize: 30),)
+                                ],),
+                              ),
+                              SizedBox(width: 10, height: 10,),
+                            ],
+                          ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                Positioned(
+                  top: 400,
+                  //left: MediaQuery.of(context).size.width - 200,
+                  child: Image.asset("imgs/anim.gif")
+                )
+              ],
+            ),
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Positioned.fill(
+                  child: Image.asset("imgs/bg.png", fit: BoxFit.cover),
+                ),
+                Positioned(
+                  top: 50,
+                  child: Center(
+                    child: Column(
+                      children: [
+                        Text(
+                          "Education Details",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30,
+                            fontFamily: "f1",
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        horizontal
+                            ? Row(
+                                children: [
+                                  Container(
+                                    width: 350,
+                                    height: 350,
+                                    decoration: BoxDecoration(
+                                      color: const Color.fromARGB(
+                                        255,
+                                        40,
+                                        52,
+                                        58,
+                                      ),
+                                      borderRadius: BorderRadius.circular(20),
+                                      border: Border.all(
+                                        color: const Color.fromARGB(
+                                          255,
+                                          246,
+                                          225,
+                                          163,
+                                        ),
+                                      ),
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 100,
+                                          height: 100,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(
+                                              360,
+                                            ),
+                                            image: DecorationImage(
+                                              image: NetworkImage(
+                                                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZuIBpQP-5qfLq8evXddFTlAD6AFPAzvbP48NFrIYsUQ&s=10",
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(height: 10),
+                                        Text(
+                                          "COMSATS University",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: "f2",
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                        Text(
+                                          "Lahore Campus",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: "f2",
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                        Text(
+                                          "BS Software engineering",
+                                          style: TextStyle(
+                                            color: const Color.fromARGB(
+                                              255,
+                                              168,
+                                              168,
+                                              168,
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          "2nd semester",
+                                          style: TextStyle(
+                                            color: const Color.fromARGB(
+                                              255,
+                                              168,
+                                              168,
+                                              168,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(width: 10),
+                                  Container(
+                                    width: 350,
+                                    height: 350,
+                                    decoration: BoxDecoration(
+                                      color: const Color.fromARGB(
+                                        255,
+                                        40,
+                                        52,
+                                        58,
+                                      ),
+                                      borderRadius: BorderRadius.circular(20),
+                                      border: Border.all(
+                                        color: const Color.fromARGB(
+                                          255,
+                                          246,
+                                          225,
+                                          163,
+                                        ),
+                                      ),
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 100,
+                                          height: 100,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(
+                                              360,
+                                            ),
+                                            image: DecorationImage(
+                                              image: NetworkImage(
+                                                "https://i.ibb.co/tpbdBDWf/image.png",
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(height: 10),
+                                        Text(
+                                          "MTB School & College",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: "f2",
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                        Text(
+                                          "Sadiqabad, RYK",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: "f2",
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                        Text(
+                                          "Intermediate in",
+                                          style: TextStyle(
+                                            color: const Color.fromARGB(
+                                              255,
+                                              168,
+                                              168,
+                                              168,
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          "Computer Science",
+                                          style: TextStyle(
+                                            color: const Color.fromARGB(
+                                              255,
+                                              168,
+                                              168,
+                                              168,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              )
+                            : Column(
+                                children: [
+                                  Container(
+                                    width: 350,
+                                    height: 240,
+                                    decoration: BoxDecoration(
+                                      color: const Color.fromARGB(
+                                        255,
+                                        40,
+                                        52,
+                                        58,
+                                      ),
+                                      borderRadius: BorderRadius.circular(20),
+                                      border: Border.all(
+                                        color: const Color.fromARGB(
+                                          255,
+                                          246,
+                                          225,
+                                          163,
+                                        ),
+                                      ),
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 100,
+                                          height: 100,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(
+                                              360,
+                                            ),
+                                            image: DecorationImage(
+                                              image: NetworkImage(
+                                                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZuIBpQP-5qfLq8evXddFTlAD6AFPAzvbP48NFrIYsUQ&s=10",
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(height: 10),
+                                        Text(
+                                          "COMSATS University",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: "f2",
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                        Text(
+                                          "Lahore Campus",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: "f2",
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                        Text(
+                                          "BS Software engineering",
+                                          style: TextStyle(
+                                            color: const Color.fromARGB(
+                                              255,
+                                              168,
+                                              168,
+                                              168,
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          "2nd semester",
+                                          style: TextStyle(
+                                            color: const Color.fromARGB(
+                                              255,
+                                              168,
+                                              168,
+                                              168,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+                                  Container(
+                                    width: 350,
+                                    height: 240,
+                                    decoration: BoxDecoration(
+                                      color: const Color.fromARGB(
+                                        255,
+                                        40,
+                                        52,
+                                        58,
+                                      ),
+                                      borderRadius: BorderRadius.circular(20),
+                                      border: Border.all(
+                                        color: const Color.fromARGB(
+                                          255,
+                                          246,
+                                          225,
+                                          163,
+                                        ),
+                                      ),
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 100,
+                                          height: 100,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(
+                                              360,
+                                            ),
+                                            image: DecorationImage(
+                                              image: NetworkImage(
+                                                "https://i.ibb.co/tpbdBDWf/image.png",
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(height: 10),
+                                        Text(
+                                          "MTB School & College",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: "f2",
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                        Text(
+                                          "Sadiqabad, RYK",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: "f2",
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                        Text(
+                                          "Intermediate in",
+                                          style: TextStyle(
+                                            color: const Color.fromARGB(
+                                              255,
+                                              168,
+                                              168,
+                                              168,
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          "Computer Science",
+                                          style: TextStyle(
+                                            color: const Color.fromARGB(
+                                              255,
+                                              168,
+                                              168,
+                                              168,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
