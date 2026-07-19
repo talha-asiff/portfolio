@@ -1324,6 +1324,7 @@ class MainApp extends StatelessWidget {
                         SizedBox(height: 20),
                         Center(
                           child: InkWell(
+                            splashColor: const Color.fromARGB(0, 255, 255, 255),
                             onTap: launchSite1,
                             child: Text(
                               "View more on Github",
@@ -1341,6 +1342,336 @@ class MainApp extends StatelessWidget {
                 ),
               ],
             ),
+
+
+
+            Stack(
+              alignment: Alignment.topLeft,
+              children: [
+                Positioned.fill(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          const Color.fromARGB(255, 36, 99, 73),
+                          Colors.black,
+                          Colors.black,
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  child: Padding(
+                    padding: EdgeInsetsGeometry.all(50),
+                    child: Text(
+                      "SKILLS",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 80,
+                        fontFamily: "f1",
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  top: 50,
+                  child: SizedBox(
+                    width: w,
+                    height: h,
+                    child: ListView(
+                      scrollDirection: Axis.vertical,
+                      children: [
+                        SizedBox(
+                          width: w,
+                          height: 240,
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.all(10),
+                                child: SizedBox(width: 100, height: 100),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(10),
+                                child: Card(
+                                  color: const Color.fromARGB(86, 45, 101, 47),
+                                  elevation: 10,
+                                  child: SizedBox(
+                                    width: 300,
+                                    height: 80,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: EdgeInsets.all(20),
+                                          child: Icon(
+                                            Icons.android,
+                                            color: Colors.white,
+                                            size: 40,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 20),
+                                          child: Text(
+                                            "Mobile App development",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: "f2",
+                                              fontSize: 20,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+
+                              Padding(
+                                padding: EdgeInsets.all(10),
+                                child: Card(
+                                  color: const Color.fromARGB(86, 45, 101, 47),
+                                  elevation: 10,
+                                  child: SizedBox(
+                                    width: 300,
+                                    height: 80,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: EdgeInsets.all(20),
+                                          child: Icon(
+                                            Icons.web,
+                                            color: Colors.white,
+                                            size: 40,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 20),
+                                          child: Text(
+                                            "Web app development",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: "f2",
+                                              fontSize: 20,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+
+                              Padding(
+                                padding: EdgeInsets.all(10),
+                                child: Card(
+                                  color: const Color.fromARGB(86, 45, 101, 47),
+                                  elevation: 10,
+                                  child: SizedBox(
+                                    width: 300,
+                                    height: 80,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: EdgeInsets.all(20),
+                                          child: Icon(
+                                            Icons.gamepad_outlined,
+                                            color: Colors.white,
+                                            size: 40,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 20),
+                                          child: Text(
+                                            "Game developement",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: "f2",
+                                              fontSize: 20,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(10),
+                                child: Card(
+                                  color: const Color.fromARGB(86, 45, 101, 47),
+                                  elevation: 10,
+                                  child: SizedBox(
+                                    width: 300,
+                                    height: 80,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: EdgeInsets.all(20),
+                                          child: Icon(
+                                            Icons.code,
+                                            color: Colors.white,
+                                            size: 40,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 20),
+                                          child: Text(
+                                            "System level coding",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: "f2",
+                                              fontSize: 20,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(10),
+                                child: Card(
+                                  color: const Color.fromARGB(86, 45, 101, 47),
+                                  elevation: 10,
+                                  child: SizedBox(
+                                    width: 300,
+                                    height: 80,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: EdgeInsets.all(20),
+                                          child: Icon(
+                                            Icons.computer_rounded,
+                                            color: Colors.white,
+                                            size: 40,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 20),
+                                          child: Text(
+                                            "Linux Bash",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: "f2",
+                                              fontSize: 20,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(10),
+                                child: Card(
+                                  color: const Color.fromARGB(86, 45, 101, 47),
+                                  elevation: 10,
+                                  child: SizedBox(
+                                    width: 300,
+                                    height: 80,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: EdgeInsets.all(20),
+                                          child: Icon(
+                                            Icons.wifi,
+                                            color: Colors.white,
+                                            size: 40,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 20),
+                                          child: Text(
+                                            "Networking and socket programming",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: "f2",
+                                              fontSize: 20,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.all(10),
+                                child: Card(
+                                  color: const Color.fromARGB(86, 45, 101, 47),
+                                  elevation: 10,
+                                  child: SizedBox(
+                                    width: 300,
+                                    height: 80,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: EdgeInsets.all(20),
+                                          child: Icon(
+                                            Icons.design_services_outlined,
+                                            color: Colors.white,
+                                            size: 40,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 20),
+                                          child: Text(
+                                            "Graphics designing",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontFamily: "f2",
+                                              fontSize: 20,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 20),
+                        
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            
           ],
         ),
       ),
