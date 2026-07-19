@@ -1664,7 +1664,67 @@ class MainApp extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 20),
-                        
+                        Center(
+                           child: Text(
+                              "Memberships",
+                              style: TextStyle(
+                                color: const Color.fromARGB(242, 247, 234, 234),
+                                fontFamily: "f2",
+                                fontSize: 60,
+                              ),
+                            ),
+                        ),
+                        Center(
+                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.network("https://i.ibb.co/rKXvgTPH/pngwing-com.png", height: 30, width: 30,),
+                              SizedBox(width: 10,),
+                              Text(
+                              "Google Developer Groups on Campus CUI Lahore",
+                              style: TextStyle(
+                                color: const Color.fromARGB(242, 247, 234, 234),
+                                fontFamily: "f2",
+                                fontSize: 20,
+                              ),
+                            ),
+                            ],
+                           )
+                        ),
+                        Center(
+                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.network("https://i.ibb.co/SpwTqC4/pngwing-com-1.png", height: 30, width: 30,),
+                              SizedBox(width: 10,),
+                              Text(
+                              "Microsoft Learn Student Ambassadors (MLSA) CUI Lahore",
+                              style: TextStyle(
+                                color: const Color.fromARGB(242, 247, 234, 234),
+                                fontFamily: "f2",
+                                fontSize: 20,
+                              ),
+                            ),
+                            ],
+                           )
+                        ),
+                        Center(
+                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.network("https://i.ibb.co/wZbkN4T5/pngwing-com-2.png", height: 30, width: 60,),
+                              SizedBox(width: 10,),
+                              Text(
+                              "IEEE RAS Robotics and Automation Society CUI Lahore",
+                              style: TextStyle(
+                                color: const Color.fromARGB(242, 247, 234, 234),
+                                fontFamily: "f2",
+                                fontSize: 20,
+                              ),
+                            ),
+                            ],
+                           )
+                        ),
                       ],
                     ),
                   ),
