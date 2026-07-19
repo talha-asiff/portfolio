@@ -1147,8 +1147,7 @@ class MainApp extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(height: 20,),
-
+                        SizedBox(height: 20),
 
                         SizedBox(
                           width: w,
@@ -1156,10 +1155,6 @@ class MainApp extends StatelessWidget {
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
-                              Padding(
-                                padding: EdgeInsets.all(10),
-                                child: SizedBox(width: 100, height: 100),
-                              ),
                               Padding(
                                 padding: EdgeInsets.all(10),
                                 child: Card(
@@ -1177,7 +1172,7 @@ class MainApp extends StatelessWidget {
                                         Padding(
                                           padding: EdgeInsets.all(20),
                                           child: Icon(
-                                            Icons.task_alt,
+                                            Icons.network_check_sharp,
                                             color: Colors.white,
                                             size: 40,
                                           ),
@@ -1185,7 +1180,7 @@ class MainApp extends StatelessWidget {
                                         Padding(
                                           padding: EdgeInsets.only(left: 20),
                                           child: Text(
-                                            "Flutter Todo List App",
+                                            "ThunderNet - Windows socket LAN chating app",
                                             style: TextStyle(
                                               color: Colors.white,
                                               fontFamily: "f2",
@@ -1196,7 +1191,7 @@ class MainApp extends StatelessWidget {
                                         Padding(
                                           padding: EdgeInsets.only(left: 20),
                                           child: Text(
-                                            "APP DEV",
+                                            "NETWORKING",
                                             style: TextStyle(
                                               color: const Color.fromARGB(
                                                 69,
@@ -1240,7 +1235,7 @@ class MainApp extends StatelessWidget {
                                         Padding(
                                           padding: EdgeInsets.only(left: 20),
                                           child: Text(
-                                            "Flutter Calculator",
+                                            "NetSOCK - Simple harmless RAT",
                                             style: TextStyle(
                                               color: Colors.white,
                                               fontFamily: "f2",
@@ -1251,7 +1246,7 @@ class MainApp extends StatelessWidget {
                                         Padding(
                                           padding: EdgeInsets.only(left: 20),
                                           child: Text(
-                                            "APP DEV",
+                                            "NETWORKING",
                                             style: TextStyle(
                                               color: const Color.fromARGB(
                                                 69,
@@ -1268,131 +1263,6 @@ class MainApp extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                              ),
-
-                              Padding(
-                                padding: EdgeInsets.all(10),
-                                child: Card(
-                                  color: const Color.fromARGB(86, 45, 101, 47),
-                                  elevation: 10,
-                                  child: SizedBox(
-                                    width: 300,
-                                    height: 100,
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding: EdgeInsets.all(20),
-                                          child: Icon(
-                                            Icons.school,
-                                            color: Colors.white,
-                                            size: 40,
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(left: 20),
-                                          child: Text(
-                                            "COMSATS Merit Calculator",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontFamily: "f2",
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(left: 20),
-                                          child: Text(
-                                            "APP DEV",
-                                            style: TextStyle(
-                                              color: const Color.fromARGB(
-                                                69,
-                                                255,
-                                                255,
-                                                255,
-                                              ),
-                                              fontFamily: "f2",
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.all(10),
-                                child: Card(
-                                  color: const Color.fromARGB(86, 45, 101, 47),
-                                  elevation: 10,
-                                  child: SizedBox(
-                                    width: 300,
-                                    height: 100,
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding: EdgeInsets.all(20),
-                                          child: Icon(
-                                            Icons.shopping_bag,
-                                            color: Colors.white,
-                                            size: 40,
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(left: 20),
-                                          child: Text(
-                                            "Personal Expense Tracker",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontFamily: "f2",
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(left: 20),
-                                          child: Text(
-                                            "APP DEV",
-                                            style: TextStyle(
-                                              color: const Color.fromARGB(
-                                                69,
-                                                255,
-                                                255,
-                                                255,
-                                              ),
-                                              fontFamily: "f2",
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(height: 20,),
-                        
-
-                        SizedBox(
-                          width: w,
-                          height: 200,
-                          child: ListView(
-                            scrollDirection: Axis.horizontal,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.all(10),
-                                child: SizedBox(width: 100, height: 100),
                               ),
                               Padding(
                                 padding: EdgeInsets.all(10),
@@ -1419,7 +1289,7 @@ class MainApp extends StatelessWidget {
                                         Padding(
                                           padding: EdgeInsets.only(left: 20),
                                           child: Text(
-                                            "Flutter Todo List App",
+                                            "3D Car Driving Simulator Game",
                                             style: TextStyle(
                                               color: Colors.white,
                                               fontFamily: "f2",
@@ -1430,171 +1300,7 @@ class MainApp extends StatelessWidget {
                                         Padding(
                                           padding: EdgeInsets.only(left: 20),
                                           child: Text(
-                                            "APP DEV",
-                                            style: TextStyle(
-                                              color: const Color.fromARGB(
-                                                69,
-                                                255,
-                                                255,
-                                                255,
-                                              ),
-                                              fontFamily: "f2",
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-
-                              Padding(
-                                padding: EdgeInsets.all(10),
-                                child: Card(
-                                  color: const Color.fromARGB(86, 45, 101, 47),
-                                  elevation: 10,
-                                  child: SizedBox(
-                                    width: 300,
-                                    height: 100,
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding: EdgeInsets.all(20),
-                                          child: Icon(
-                                            Icons.calculate,
-                                            color: Colors.white,
-                                            size: 40,
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(left: 20),
-                                          child: Text(
-                                            "Flutter Calculator",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontFamily: "f2",
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(left: 20),
-                                          child: Text(
-                                            "APP DEV",
-                                            style: TextStyle(
-                                              color: const Color.fromARGB(
-                                                69,
-                                                255,
-                                                255,
-                                                255,
-                                              ),
-                                              fontFamily: "f2",
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-
-                              Padding(
-                                padding: EdgeInsets.all(10),
-                                child: Card(
-                                  color: const Color.fromARGB(86, 45, 101, 47),
-                                  elevation: 10,
-                                  child: SizedBox(
-                                    width: 300,
-                                    height: 100,
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding: EdgeInsets.all(20),
-                                          child: Icon(
-                                            Icons.school,
-                                            color: Colors.white,
-                                            size: 40,
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(left: 20),
-                                          child: Text(
-                                            "COMSATS Merit Calculator",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontFamily: "f2",
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(left: 20),
-                                          child: Text(
-                                            "APP DEV",
-                                            style: TextStyle(
-                                              color: const Color.fromARGB(
-                                                69,
-                                                255,
-                                                255,
-                                                255,
-                                              ),
-                                              fontFamily: "f2",
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.all(10),
-                                child: Card(
-                                  color: const Color.fromARGB(86, 45, 101, 47),
-                                  elevation: 10,
-                                  child: SizedBox(
-                                    width: 300,
-                                    height: 100,
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding: EdgeInsets.all(20),
-                                          child: Icon(
-                                            Icons.shopping_bag,
-                                            color: Colors.white,
-                                            size: 40,
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(left: 20),
-                                          child: Text(
-                                            "Personal Expense Tracker",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontFamily: "f2",
-                                              fontSize: 20,
-                                            ),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(left: 20),
-                                          child: Text(
-                                            "APP DEV",
+                                            "GAME DEV",
                                             style: TextStyle(
                                               color: const Color.fromARGB(
                                                 69,
@@ -1615,10 +1321,20 @@ class MainApp extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(height: 20,),
-                        
-
-
+                        SizedBox(height: 20),
+                        Center(
+                          child: InkWell(
+                            onTap: launchSite1,
+                            child: Text(
+                              "View more on Github",
+                              style: TextStyle(
+                                color: const Color.fromARGB(242, 247, 234, 234),
+                                fontFamily: "f2",
+                                fontSize: 20,
+                              ),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
