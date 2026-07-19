@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'dart:ui';
 
 bool horizontal = false;
 void main() {
@@ -1343,8 +1344,6 @@ class MainApp extends StatelessWidget {
               ],
             ),
 
-
-
             Stack(
               alignment: Alignment.topLeft,
               children: [
@@ -1353,8 +1352,8 @@ class MainApp extends StatelessWidget {
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
+                          const Color.fromARGB(255, 0, 0, 0),
                           const Color.fromARGB(255, 36, 99, 73),
-                          Colors.black,
                           Colors.black,
                         ],
                       ),
@@ -1665,65 +1664,92 @@ class MainApp extends StatelessWidget {
                         ),
                         SizedBox(height: 20),
                         Center(
-                           child: Text(
-                              "Memberships",
-                              style: TextStyle(
-                                color: const Color.fromARGB(242, 247, 234, 234),
-                                fontFamily: "f2",
-                                fontSize: 60,
-                              ),
+                          child: Text(
+                            "Memberships",
+                            style: TextStyle(
+                              color: const Color.fromARGB(242, 247, 234, 234),
+                              fontFamily: "f2",
+                              fontSize: w >= h ? 60 : 30,
                             ),
+                          ),
                         ),
                         Center(
-                           child: Row(
+                          child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network("https://i.ibb.co/rKXvgTPH/pngwing-com.png", height: 30, width: 30,),
-                              SizedBox(width: 10,),
-                              Text(
-                              "Google Developer Groups on Campus CUI Lahore",
-                              style: TextStyle(
-                                color: const Color.fromARGB(242, 247, 234, 234),
-                                fontFamily: "f2",
-                                fontSize: 20,
+                              Image.network(
+                                "https://i.ibb.co/rKXvgTPH/pngwing-com.png",
+                                height: w >= h ? 30 : 20,
+                                width: w >= h ? 30 : 20,
                               ),
-                            ),
+                              SizedBox(width: 10),
+                              Text(
+                                "Google Developer Groups on Campus CUI Lahore",
+                                style: TextStyle(
+                                  color: const Color.fromARGB(
+                                    242,
+                                    247,
+                                    234,
+                                    234,
+                                  ),
+                                  fontFamily: "f2",
+                                  fontSize: w >= h ? 20 : 10,
+                                ),
+                              ),
                             ],
-                           )
+                          ),
                         ),
                         Center(
-                           child: Row(
+                          child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network("https://i.ibb.co/SpwTqC4/pngwing-com-1.png", height: 30, width: 30,),
-                              SizedBox(width: 10,),
-                              Text(
-                              "Microsoft Learn Student Ambassadors (MLSA) CUI Lahore",
-                              style: TextStyle(
-                                color: const Color.fromARGB(242, 247, 234, 234),
-                                fontFamily: "f2",
-                                fontSize: 20,
+                              Image.network(
+                                "https://i.ibb.co/SpwTqC4/pngwing-com-1.png",
+                                height: w >= h ? 30 : 20,
+                                width: w >= h ? 30 : 20,
                               ),
-                            ),
+                              SizedBox(width: 10),
+                              Text(
+                                "Microsoft Learn Student Ambassadors (MLSA) CUI Lahore",
+                                style: TextStyle(
+                                  color: const Color.fromARGB(
+                                    242,
+                                    247,
+                                    234,
+                                    234,
+                                  ),
+                                  fontFamily: "f2",
+                                  fontSize: w >= h ? 20 : 10,
+                                ),
+                              ),
                             ],
-                           )
+                          ),
                         ),
                         Center(
-                           child: Row(
+                          child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network("https://i.ibb.co/wZbkN4T5/pngwing-com-2.png", height: 30, width: 60,),
-                              SizedBox(width: 10,),
-                              Text(
-                              "IEEE RAS Robotics and Automation Society CUI Lahore",
-                              style: TextStyle(
-                                color: const Color.fromARGB(242, 247, 234, 234),
-                                fontFamily: "f2",
-                                fontSize: 20,
+                              Image.network(
+                                "https://i.ibb.co/wZbkN4T5/pngwing-com-2.png",
+                                height: w >= h ? 30 : 20,
+                                width: w >= h ? 60 : 40,
                               ),
-                            ),
+                              SizedBox(width: 10),
+                              Text(
+                                "IEEE RAS Robotics and Automation Society CUI Lahore",
+                                style: TextStyle(
+                                  color: const Color.fromARGB(
+                                    242,
+                                    247,
+                                    234,
+                                    234,
+                                  ),
+                                  fontFamily: "f2",
+                                  fontSize: w >= h ? 20 : 10,
+                                ),
+                              ),
                             ],
-                           )
+                          ),
                         ),
                       ],
                     ),
@@ -1731,7 +1757,64 @@ class MainApp extends StatelessWidget {
                 ),
               ],
             ),
-            
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Positioned.fill(child: Image.asset(bg!, fit: BoxFit.cover)),
+                Positioned(
+                  top: 60,
+                  child: Text(
+                    "CONTACT",
+                    style: TextStyle(
+                      color: const Color.fromARGB(131, 247, 234, 234),
+                      fontFamily: "f1",
+                      fontSize: w >= h ? 100 : 80,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  child: ClipRect(
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+                      child: Container(
+                        width: w >= h ? w - 500 : 300,
+                        height: 400,
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(54, 0, 0, 0),
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Center(
+                          child: Column(
+                            children: [
+                              SizedBox(height: 40),
+                              Icon(Icons.email_outlined, color: const Color.fromARGB(134, 255, 255, 255), size: 80,),
+                              SizedBox(height: 30),
+                              Text(
+                                "Let's Connect",
+                                style: TextStyle(
+                                  color: const Color.fromARGB(157, 247, 234, 234),
+                                  fontFamily: "f1",
+                                  fontSize: w >= h ? 60 : 30,
+                                ),
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                Text("talhaasif.dev@gmail.com", style: TextStyle(color: Colors.white, fontFamily: "f2", fontSize: 15),)
+                              ],),
+                              SizedBox(height: 20,),
+                              
+                              
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
