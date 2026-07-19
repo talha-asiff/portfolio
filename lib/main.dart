@@ -30,7 +30,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
-    if(w>h){
+    if (w > h) {
       horizontal = true;
     } else {
       horizontal = false;
@@ -286,10 +286,10 @@ class MainApp extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(height: 20,),
+                        SizedBox(height: 20),
                         Text(
-                            "TECH STACK",
-                            style: TextStyle(
+                          "TECH STACK",
+                          style: TextStyle(
                             color: Colors.white,
                             fontSize: 40,
                             fontFamily: "f1",
@@ -298,185 +298,352 @@ class MainApp extends StatelessWidget {
                         Padding(
                           padding: EdgeInsets.all(10),
                           child: SizedBox(
-                          width: w,
-                          height: h - (w>=h ? 350 : 100),
-                          child: ListView(
-                            scrollDirection: w>h ? Axis.horizontal : Axis.vertical,
-                            children: [
-                              Container(
-                                width: w>=h ? 350 : 300,
-                                height: w>=h ? 100 : 200,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [Colors.blue, const Color.fromARGB(255, 102, 68, 255)]),
-                                  borderRadius: BorderRadius.circular(20),
+                            width: w,
+                            height: h - (w >= h ? 350 : 100),
+                            child: ListView(
+                              scrollDirection: w > h
+                                  ? Axis.horizontal
+                                  : Axis.vertical,
+                              children: [
+                                Container(
+                                  width: w >= h ? 350 : 300,
+                                  height: w >= h ? 100 : 200,
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        Colors.blue,
+                                        const Color.fromARGB(255, 102, 68, 255),
+                                      ],
+                                    ),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.network(
+                                        "https://i.ibb.co/YFfZdq6C/pngwing-com.png",
+                                        width: 80,
+                                        height: 80,
+                                      ),
+                                      Text(
+                                        "  Flutter",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 30,
+                                          fontFamily: "f2",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                                alignment: Alignment.center,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                  Image.network("https://i.ibb.co/YFfZdq6C/pngwing-com.png", width: 80, height: 80,),
-                                  Text("  Flutter", style: TextStyle(color: Colors.white, fontSize: 30, fontFamily: "f2"),)
-                                ],),
-                              ),
-                              SizedBox(width: 10, height: 10,),
-                              Container(
-                                width: w>=h ? 350 : 300,
-                                height: w>=h ? 100 : 200,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 213, 193, 7), const Color.fromARGB(255, 204, 73, 2)]),
-                                  borderRadius: BorderRadius.circular(20)
+                                SizedBox(width: 10, height: 10),
+                                Container(
+                                  width: w >= h ? 350 : 300,
+                                  height: w >= h ? 100 : 200,
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        const Color.fromARGB(255, 213, 193, 7),
+                                        const Color.fromARGB(255, 204, 73, 2),
+                                      ],
+                                    ),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.network(
+                                        "https://i.ibb.co/1tdms01h/pngwing-com-3.png",
+                                        width: 80,
+                                        height: 80,
+                                      ),
+                                      Text(
+                                        "  Firebase",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 30,
+                                          fontFamily: "f2",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                                alignment: Alignment.center,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                  Image.network("https://i.ibb.co/1tdms01h/pngwing-com-3.png", width: 80, height: 80,),
-                                  Text("  Firebase", style: TextStyle(color: Colors.white, fontSize: 30, fontFamily: "f2"),)
-                                ],),
-                              ),
-                              SizedBox(width: 10, height: 10,),
-                              
-                              Container(
-                                width: w>=h ? 350 : 300,
-                                height: w>=h ? 100 : 200,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 65, 33, 243), const Color.fromARGB(255, 68, 227, 255)]),
-                                  borderRadius: BorderRadius.circular(20)
+                                SizedBox(width: 10, height: 10),
+
+                                Container(
+                                  width: w >= h ? 350 : 300,
+                                  height: w >= h ? 100 : 200,
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        const Color.fromARGB(255, 65, 33, 243),
+                                        const Color.fromARGB(255, 68, 227, 255),
+                                      ],
+                                    ),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.network(
+                                        "https://i.ibb.co/twXN4LCQ/dart.png",
+                                        width: 80,
+                                        height: 80,
+                                      ),
+                                      Text(
+                                        "  Dart",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 30,
+                                          fontFamily: "f2",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                                alignment: Alignment.center,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                  Image.network("https://i.ibb.co/twXN4LCQ/dart.png", width: 80, height: 80,),
-                                  Text("  Dart", style: TextStyle(color: Colors.white, fontSize: 30, fontFamily: "f2"),)
-                                ],),
-                              ),
-                              SizedBox(width: 10, height: 10,),
-                              Container(
-                                width: w>=h ? 350 : 300,
-                                height: w>=h ? 100 : 200,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 24, 2, 148), const Color.fromARGB(255, 0, 85, 212)]),
-                                  borderRadius: BorderRadius.circular(20)
+                                SizedBox(width: 10, height: 10),
+                                Container(
+                                  width: w >= h ? 350 : 300,
+                                  height: w >= h ? 100 : 200,
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        const Color.fromARGB(255, 24, 2, 148),
+                                        const Color.fromARGB(255, 0, 85, 212),
+                                      ],
+                                    ),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.network(
+                                        "https://i.ibb.co/Lhh3nmN6/pngwing-com-1.png",
+                                        width: 80,
+                                        height: 80,
+                                      ),
+                                      Text(
+                                        "  C++",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 30,
+                                          fontFamily: "f2",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                                alignment: Alignment.center,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                  Image.network("https://i.ibb.co/Lhh3nmN6/pngwing-com-1.png", width: 80, height: 80,),
-                                  Text("  C++", style: TextStyle(color: Colors.white, fontSize: 30, fontFamily: "f2"),)
-                                ],),
-                              ),
-                              SizedBox(width: 10, height: 10,),
-                              Container(
-                                width: w>=h ? 350 : 300,
-                                height: w>=h ? 100 : 200,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 20, 1, 131), const Color.fromARGB(255, 0, 69, 219)]),
-                                  borderRadius: BorderRadius.circular(20)
+                                SizedBox(width: 10, height: 10),
+                                Container(
+                                  width: w >= h ? 350 : 300,
+                                  height: w >= h ? 100 : 200,
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        const Color.fromARGB(255, 20, 1, 131),
+                                        const Color.fromARGB(255, 0, 69, 219),
+                                      ],
+                                    ),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.network(
+                                        "https://i.ibb.co/PzYtT580/pngwing-com-4.png",
+                                        width: 80,
+                                        height: 80,
+                                      ),
+                                      Text(
+                                        "  C",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 30,
+                                          fontFamily: "f2",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                                alignment: Alignment.center,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                  Image.network("https://i.ibb.co/PzYtT580/pngwing-com-4.png", width: 80, height: 80,),
-                                  Text("  C", style: TextStyle(color: Colors.white, fontSize: 30, fontFamily: "f2"),)
-                                ],),
-                              ),
-                              SizedBox(width: 10, height: 10,),
-                              Container(
-                                width: w>=h ? 350 : 300,
-                                height: w>=h ? 100 : 200,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 15, 3, 81), const Color.fromARGB(255, 164, 219, 0)]),
-                                  borderRadius: BorderRadius.circular(20)
+                                SizedBox(width: 10, height: 10),
+                                Container(
+                                  width: w >= h ? 350 : 300,
+                                  height: w >= h ? 100 : 200,
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        const Color.fromARGB(255, 15, 3, 81),
+                                        const Color.fromARGB(255, 164, 219, 0),
+                                      ],
+                                    ),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.network(
+                                        "https://i.ibb.co/rGssrMxz/pngwing-com-2.png",
+                                        width: 80,
+                                        height: 80,
+                                      ),
+                                      Text(
+                                        "  Python",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 30,
+                                          fontFamily: "f2",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                                alignment: Alignment.center,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                  Image.network("https://i.ibb.co/rGssrMxz/pngwing-com-2.png", width: 80, height: 80,),
-                                  Text("  Python", style: TextStyle(color: Colors.white, fontSize: 30, fontFamily: "f2"),)
-                                ],),
-                              ),
-                              SizedBox(width: 10, height: 10,),
-                              Container(
-                                width: w>=h ? 350 : 300,
-                                height: w>=h ? 100 : 200,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 1, 49, 131), const Color.fromARGB(255, 0, 106, 219)]),
-                                  borderRadius: BorderRadius.circular(20)
+                                SizedBox(width: 10, height: 10),
+                                Container(
+                                  width: w >= h ? 350 : 300,
+                                  height: w >= h ? 100 : 200,
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        const Color.fromARGB(255, 1, 49, 131),
+                                        const Color.fromARGB(255, 0, 106, 219),
+                                      ],
+                                    ),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.network(
+                                        "https://i.ibb.co/gZvycXJc/pngwing-com-5.png",
+                                        width: 80,
+                                        height: 80,
+                                      ),
+                                      Text(
+                                        "  Godot Engine",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 30,
+                                          fontFamily: "f2",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                                alignment: Alignment.center,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                  Image.network("https://i.ibb.co/gZvycXJc/pngwing-com-5.png", width: 80, height: 80,),
-                                  Text("  Godot Engine", style: TextStyle(color: Colors.white, fontSize: 30, fontFamily: "f2"),)
-                                ],),
-                              ),
-                              SizedBox(width: 10, height: 10,),
-                              Container(
-                                width: w>=h ? 350 : 300,
-                                height: w>=h ? 100 : 200,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 131, 51, 1), const Color.fromARGB(255, 219, 131, 0)]),
-                                  borderRadius: BorderRadius.circular(20)
+                                SizedBox(width: 10, height: 10),
+                                Container(
+                                  width: w >= h ? 350 : 300,
+                                  height: w >= h ? 100 : 200,
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        const Color.fromARGB(255, 131, 51, 1),
+                                        const Color.fromARGB(255, 219, 131, 0),
+                                      ],
+                                    ),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.network(
+                                        "https://i.ibb.co/nNP21Wb9/pngwing-com-6.png",
+                                        width: 80,
+                                        height: 80,
+                                      ),
+                                      Text(
+                                        "  HTML",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 30,
+                                          fontFamily: "f2",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                                alignment: Alignment.center,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                  Image.network("https://i.ibb.co/nNP21Wb9/pngwing-com-6.png", width: 80, height: 80,),
-                                  Text("  HTML", style: TextStyle(color: Colors.white, fontSize: 30, fontFamily: "f2"),)
-                                ],),
-                              ),
-                              SizedBox(width: 10, height: 10,),
-                              Container(
-                                width: w>=h ? 350 : 300,
-                                height: w>=h ? 100 : 200,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 1, 10, 131), const Color.fromARGB(255, 0, 110, 255)]),
-                                  borderRadius: BorderRadius.circular(20)
+                                SizedBox(width: 10, height: 10),
+                                Container(
+                                  width: w >= h ? 350 : 300,
+                                  height: w >= h ? 100 : 200,
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        const Color.fromARGB(255, 1, 10, 131),
+                                        const Color.fromARGB(255, 0, 110, 255),
+                                      ],
+                                    ),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.network(
+                                        "https://i.ibb.co/wFYhCSHj/pngwing-com-7.png",
+                                        width: 80,
+                                        height: 80,
+                                      ),
+                                      Text(
+                                        "  CSS",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 30,
+                                          fontFamily: "f2",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                                alignment: Alignment.center,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                  Image.network("https://i.ibb.co/wFYhCSHj/pngwing-com-7.png", width: 80, height: 80,),
-                                  Text("  CSS", style: TextStyle(color: Colors.white, fontSize: 30, fontFamily: "f2"),)
-                                ],),
-                              ),
-                              SizedBox(width: 10, height: 10,),
-                              Container(
-                                width: w>=h ? 350 : 300,
-                                height: w>=h ? 100 : 200,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [const Color.fromARGB(255, 131, 107, 1), const Color.fromARGB(255, 208, 219, 0)]),
-                                  borderRadius: BorderRadius.circular(20)
+                                SizedBox(width: 10, height: 10),
+                                Container(
+                                  width: w >= h ? 350 : 300,
+                                  height: w >= h ? 100 : 200,
+                                  decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        const Color.fromARGB(255, 131, 107, 1),
+                                        const Color.fromARGB(255, 208, 219, 0),
+                                      ],
+                                    ),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.network(
+                                        "https://i.ibb.co/C5NXMC0X/pngwing-com-8.png",
+                                        width: 80,
+                                        height: 80,
+                                      ),
+                                      Text(
+                                        "  Javascript",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 30,
+                                          fontFamily: "f2",
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                                alignment: Alignment.center,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                  Image.network("https://i.ibb.co/C5NXMC0X/pngwing-com-8.png", width: 80, height: 80,),
-                                  Text("  Javascript", style: TextStyle(color: Colors.white, fontSize: 30, fontFamily: "f2"),)
-                                ],),
-                              ),
-                              SizedBox(width: 10, height: 10,),
-                            ],
+                                SizedBox(width: 10, height: 10),
+                              ],
+                            ),
                           ),
-                          ),
-                        )
+                        ),
                       ],
                     ),
                   ),
                 ),
-                Positioned(
-                  top: 380,
-                  //left: MediaQuery.of(context).size.width - 200,
-                  child: Image.asset("imgs/anim.gif")
-                )
               ],
             ),
             Stack(
@@ -499,161 +666,295 @@ class MainApp extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(height: 20,),
+                      SizedBox(height: 20),
                       Text(
-                          "EDUCATION",
-                          style: TextStyle(
+                        "EDUCATION",
+                        style: TextStyle(
                           color: Colors.white,
                           fontSize: 40,
                           fontFamily: "f1",
                         ),
                       ),
-                      SizedBox(height: 20,),
-                      w>=h ? 
-                        Row(
-                            children: [
-                              SizedBox(width: 100,),
-                              Container(
-                                width: 350,
-                                height: 200,
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Colors.white,
+                      SizedBox(height: 20),
+                      w >= h
+                          ? Row(
+                              children: [
+                                SizedBox(width: 100),
+                                Container(
+                                  width: 350,
+                                  height: 200,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.white),
+                                    borderRadius: BorderRadius.circular(20),
                                   ),
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                alignment: Alignment.center,
-                                child: Column(
-                                  children: [
-                                    SizedBox(height: 65,),
-                                    Text("COMSATS Lahore", style: TextStyle(color: Colors.white, fontSize: 25),),
-                                    Text("BS Software Engineering (2nd semester)", style: TextStyle(color: Colors.white, fontSize: 15),),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: 140,
-                                height: 1,
-                                color:Colors.white
-                              ),
-                              Container(
-                                width: 350,
-                                height: 200,
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Colors.white
+                                  alignment: Alignment.center,
+                                  child: Column(
+                                    children: [
+                                      SizedBox(height: 65),
+                                      Text(
+                                        "COMSATS Lahore",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 25,
+                                        ),
+                                      ),
+                                      Text(
+                                        "BS Software Engineering (2nd semester)",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                  borderRadius: BorderRadius.circular(20),
                                 ),
-                                alignment: Alignment.center,
-                                child: Column(
-                                  children: [
-                                    SizedBox(height: 65,),
-                                    Text("MTB College SDK", style: TextStyle(color: Colors.white, fontSize: 25),),
-                                    Text("Intermedite in Computer Science", style: TextStyle(color: Colors.white, fontSize: 15),),
-                                  ],
+                                Container(
+                                  width: 140,
+                                  height: 1,
+                                  color: Colors.white,
                                 ),
-                              ),
-                              Container(
-                                width: 100,
-                                height: 1,
-                                color:Colors.white
-                              ),
-                              Container(
-                                width: 350,
-                                height: 200,
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Colors.white
+                                Container(
+                                  width: 350,
+                                  height: 200,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.white),
+                                    borderRadius: BorderRadius.circular(20),
                                   ),
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                alignment: Alignment.center,
-                                child: Column(
-                                  children: [
-                                    SizedBox(height: 65,),
-                                    Text("MTB School SDK", style: TextStyle(color: Colors.white, fontSize: 25),),
-                                    Text("Secondary School", style: TextStyle(color: Colors.white, fontSize: 15),),
-                                  ],
-                                ),
-                              ),
-                              
-                            ],
-                          )
-                        : Column(
-                            children: [
-                              Container(
-                                width: 220,
-                                height: 100,
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Colors.white,
+                                  alignment: Alignment.center,
+                                  child: Column(
+                                    children: [
+                                      SizedBox(height: 65),
+                                      Text(
+                                        "MTB College SDK",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 25,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Intermedite in Computer Science",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                  borderRadius: BorderRadius.circular(20),
                                 ),
-                                alignment: Alignment.center,
-                                child: Column(
-                                  children: [
-                                    SizedBox(height: 25,),
-                                    Text("COMSATS Lahore", style: TextStyle(color: Colors.white, fontSize: 18),),
-                                    Text("BS Software Engineering (2nd semester)", style: TextStyle(color: Colors.white, fontSize: 10),),
-                                  ],
+                                Container(
+                                  width: 100,
+                                  height: 1,
+                                  color: Colors.white,
                                 ),
-                              ),
-                              Container(
-                                width: 1,
-                                height: 80,
-                                color:Colors.white
-                              ),
-                              Container(
-                                width: 200,
-                                height: 100,
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Colors.white
+                                Container(
+                                  width: 350,
+                                  height: 200,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.white),
+                                    borderRadius: BorderRadius.circular(20),
                                   ),
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                alignment: Alignment.center,
-                                child: Column(
-                                  children: [
-                                    SizedBox(height: 25,),
-                                    Text("MTB College SDK", style: TextStyle(color: Colors.white, fontSize: 18),),
-                                    Text("Intermedite in Computer Science", style: TextStyle(color: Colors.white, fontSize: 10),),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                width: 1,
-                                height: 80,
-                                color:Colors.white
-                              ),
-                              Container(
-                                width: 200,
-                                height: 100,
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Colors.white
+                                  alignment: Alignment.center,
+                                  child: Column(
+                                    children: [
+                                      SizedBox(height: 65),
+                                      Text(
+                                        "MTB School SDK",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 25,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Secondary School",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                  borderRadius: BorderRadius.circular(20),
                                 ),
-                                alignment: Alignment.center,
-                                child: Column(
-                                  children: [
-                                    SizedBox(height: 25,),
-                                    Text("MTB School SDK", style: TextStyle(color: Colors.white, fontSize: 18),),
-                                    Text("Secondary School", style: TextStyle(color: Colors.white, fontSize: 10),),
-                                  ],
+                              ],
+                            )
+                          : Column(
+                              children: [
+                                Container(
+                                  width: 220,
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.white),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Column(
+                                    children: [
+                                      SizedBox(height: 25),
+                                      Text(
+                                        "COMSATS Lahore",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 18,
+                                        ),
+                                      ),
+                                      Text(
+                                        "BS Software Engineering (2nd semester)",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 10,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              )
-                            ]
-                        )
-
+                                Container(
+                                  width: 1,
+                                  height: 80,
+                                  color: Colors.white,
+                                ),
+                                Container(
+                                  width: 200,
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.white),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Column(
+                                    children: [
+                                      SizedBox(height: 25),
+                                      Text(
+                                        "MTB College SDK",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 18,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Intermedite in Computer Science",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 10,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  width: 1,
+                                  height: 80,
+                                  color: Colors.white,
+                                ),
+                                Container(
+                                  width: 200,
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.white),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Column(
+                                    children: [
+                                      SizedBox(height: 25),
+                                      Text(
+                                        "MTB School SDK",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 18,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Secondary School",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 10,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                     ],
                   ),
+                ),
+              ],
+            ),
+            Stack(
+              alignment: Alignment.topLeft,
+              children: [
+                Positioned.fill(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          const Color.fromARGB(255, 36, 99, 73),
+                          Colors.black,
+                          Colors.black,
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  child: Padding(
+                    padding: EdgeInsetsGeometry.all(50),
+                    child: Text(
+                      "PROJECTS",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 80,
+                        fontFamily: "f1",
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  child: SizedBox(
+                    width: w,
+                    height: 200,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Card(
+                            color: const Color.fromARGB(86, 45, 101, 47),
+                            elevation: 10,
+                            child: SizedBox(
+                              width: 300, height: 100,
+                              
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Card(
+                            color: const Color.fromARGB(86, 45, 101, 47),
+                            elevation: 10,
+                            child: SizedBox(
+                              width: 300, height: 100,
+                              
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Card(
+                            color: const Color.fromARGB(86, 45, 101, 47),
+                            elevation: 10,
+                            child: SizedBox(
+                              width: 300, height: 100,
+                              
+                            ),
+                          ),
+                        ),
+                        
+                      ],
+                    ),
+                  )
                 )
               ],
-            )
+            ),
           ],
         ),
       ),
