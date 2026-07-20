@@ -653,10 +653,10 @@ class MainApp extends StatelessWidget {
                 Positioned.fill(
                   child: Container(
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(
+                      gradient: RadialGradient(
                         colors: [
                           const Color.fromARGB(255, 36, 99, 73),
-                          Colors.black,
+                          const Color.fromARGB(255, 22, 62, 45),
                           Colors.black,
                         ],
                       ),
@@ -686,7 +686,7 @@ class MainApp extends StatelessWidget {
                                   height: 200,
                                   decoration: BoxDecoration(
                                     border: Border.all(color: Colors.white),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(360),
                                   ),
                                   alignment: Alignment.center,
                                   child: Column(
@@ -706,6 +706,13 @@ class MainApp extends StatelessWidget {
                                           fontSize: 15,
                                         ),
                                       ),
+                                      Text(
+                                        "Present",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 15,
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -719,7 +726,7 @@ class MainApp extends StatelessWidget {
                                   height: 200,
                                   decoration: BoxDecoration(
                                     border: Border.all(color: Colors.white),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(360),
                                   ),
                                   alignment: Alignment.center,
                                   child: Column(
@@ -752,7 +759,7 @@ class MainApp extends StatelessWidget {
                                   height: 200,
                                   decoration: BoxDecoration(
                                     border: Border.all(color: Colors.white),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(360),
                                   ),
                                   alignment: Alignment.center,
                                   child: Column(
@@ -784,7 +791,7 @@ class MainApp extends StatelessWidget {
                                   height: 100,
                                   decoration: BoxDecoration(
                                     border: Border.all(color: Colors.white),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(360),
                                   ),
                                   alignment: Alignment.center,
                                   child: Column(
@@ -817,7 +824,7 @@ class MainApp extends StatelessWidget {
                                   height: 100,
                                   decoration: BoxDecoration(
                                     border: Border.all(color: Colors.white),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(360),
                                   ),
                                   alignment: Alignment.center,
                                   child: Column(
@@ -850,7 +857,7 @@ class MainApp extends StatelessWidget {
                                   height: 100,
                                   decoration: BoxDecoration(
                                     border: Border.all(color: Colors.white),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(360),
                                   ),
                                   alignment: Alignment.center,
                                   child: Column(
@@ -883,19 +890,7 @@ class MainApp extends StatelessWidget {
             Stack(
               alignment: Alignment.topLeft,
               children: [
-                Positioned.fill(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          const Color.fromARGB(255, 36, 99, 73),
-                          Colors.black,
-                          Colors.black,
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
+                Positioned.fill(child: Image.asset("imgs/image2.gif", fit: BoxFit.cover)),
                 Positioned(
                   child: Padding(
                     padding: EdgeInsetsGeometry.all(50),
