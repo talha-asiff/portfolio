@@ -276,7 +276,7 @@ class MainApp extends StatelessWidget {
                         colors: [
                           Colors.black,
                           Colors.black,
-                          const Color.fromARGB(255, 36, 99, 73),
+                          const Color.fromARGB(255, 0, 25, 14),
                         ],
                       ),
                     ),
@@ -312,7 +312,7 @@ class MainApp extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
                                       colors: [
-                                        Colors.blue,
+                                        const Color.fromARGB(255, 35, 34, 34),
                                         const Color.fromARGB(255, 102, 68, 255),
                                       ],
                                     ),
@@ -345,7 +345,7 @@ class MainApp extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
                                       colors: [
-                                        const Color.fromARGB(255, 213, 193, 7),
+                                        const Color.fromARGB(255, 35, 34, 34),
                                         const Color.fromARGB(255, 204, 73, 2),
                                       ],
                                     ),
@@ -379,7 +379,7 @@ class MainApp extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
                                       colors: [
-                                        const Color.fromARGB(255, 65, 33, 243),
+                                        const Color.fromARGB(255, 35, 34, 34),
                                         const Color.fromARGB(255, 68, 227, 255),
                                       ],
                                     ),
@@ -412,7 +412,7 @@ class MainApp extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
                                       colors: [
-                                        const Color.fromARGB(255, 24, 2, 148),
+                                        const Color.fromARGB(255, 35, 34, 34),
                                         const Color.fromARGB(255, 0, 85, 212),
                                       ],
                                     ),
@@ -445,7 +445,7 @@ class MainApp extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
                                       colors: [
-                                        const Color.fromARGB(255, 20, 1, 131),
+                                        const Color.fromARGB(255, 35, 34, 34),
                                         const Color.fromARGB(255, 0, 69, 219),
                                       ],
                                     ),
@@ -478,7 +478,7 @@ class MainApp extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
                                       colors: [
-                                        const Color.fromARGB(255, 15, 3, 81),
+                                        const Color.fromARGB(255, 35, 34, 34),
                                         const Color.fromARGB(255, 164, 219, 0),
                                       ],
                                     ),
@@ -511,7 +511,7 @@ class MainApp extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
                                       colors: [
-                                        const Color.fromARGB(255, 1, 49, 131),
+                                        const Color.fromARGB(255, 35, 34, 34),
                                         const Color.fromARGB(255, 0, 106, 219),
                                       ],
                                     ),
@@ -544,7 +544,7 @@ class MainApp extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
                                       colors: [
-                                        const Color.fromARGB(255, 131, 51, 1),
+                                        const Color.fromARGB(255, 35, 34, 34),
                                         const Color.fromARGB(255, 219, 131, 0),
                                       ],
                                     ),
@@ -577,7 +577,7 @@ class MainApp extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
                                       colors: [
-                                        const Color.fromARGB(255, 1, 10, 131),
+                                        const Color.fromARGB(255, 35, 34, 34),
                                         const Color.fromARGB(255, 0, 110, 255),
                                       ],
                                     ),
@@ -610,7 +610,7 @@ class MainApp extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
                                       colors: [
-                                        const Color.fromARGB(255, 131, 107, 1),
+                                        const Color.fromARGB(255, 35, 34, 34),
                                         const Color.fromARGB(255, 208, 219, 0),
                                       ],
                                     ),
