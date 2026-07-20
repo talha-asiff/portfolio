@@ -287,7 +287,7 @@ class MainApp extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(height: 20),
+                        SizedBox(height: 40),
                         Text(
                           "TECH STACK",
                           style: TextStyle(
@@ -300,7 +300,7 @@ class MainApp extends StatelessWidget {
                           padding: EdgeInsets.all(10),
                           child: SizedBox(
                             width: w,
-                            height: h - (w >= h ? 350 : 100),
+                            height: h - (w >= h ? 400 : 150),
                             child: ListView(
                               scrollDirection: w > h
                                   ? Axis.horizontal
@@ -910,12 +910,11 @@ class MainApp extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  top: 50,
+                  top: 100,
                   child: SizedBox(
                     width: w,
                     height: h,
-                    child: ListView(
-                      scrollDirection: Axis.vertical,
+                    child: Column(
                       children: [
                         SizedBox(
                           width: w,
@@ -1379,7 +1378,6 @@ class MainApp extends StatelessWidget {
                     width: w,
                     height: h,
                     child: ListView(
-                      scrollDirection: Axis.vertical,
                       children: [
                         SizedBox(
                           width: w,
