@@ -1369,11 +1369,11 @@ class MainApp extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  top: 50,
+                  top: 100,
                   child: SizedBox(
                     width: w,
                     height: h,
-                    child: ListView(
+                    child: Column(
                       children: [
                         SizedBox(
                           width: w,
