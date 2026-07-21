@@ -37,6 +37,7 @@ class MainApp extends StatelessWidget {
       horizontal = false;
     }
     return MaterialApp(
+      title:"Talha Asif - Portfolio",
       home: Scaffold(
         extendBodyBehindAppBar: true,
         appBar: AppBar(
